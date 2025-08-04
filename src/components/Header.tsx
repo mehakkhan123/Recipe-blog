@@ -25,18 +25,18 @@ export default function Header() {
               <SheetTrigger asChild className='md:hidden py-3' aria-label='Open navigation menu'>
                 {open?(<SheetClose asChild><button type='button'><Menu/></button></SheetClose>):(<button type='button'><Menu/></button>)}
               </SheetTrigger>
-              <SheetContent className='bg-white border-none'>
-                <SheetHeader>
-              <SheetTitle className="sr-only">Portfolio Navigation</SheetTitle>
+              <SheetContent className='bg-gradient-to-br from-gray-50 to-white p-6 shadow-lg rounded--md border-none'>
+                <SheetHeader className='border-b border-b-gray-300 mb-4 py-4 flex justify-between items-center'>
+              <SheetTitle className="sr-only">Blog Navigation</SheetTitle>
                             <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
-                            <h1 className='text-green-600 text-lg font-bold cursor-pointer'>Recipe Blog</h1>
+                            <h1 className='text-green-600 text-xl font-semibold cursor-pointer'>Recipe Blog</h1>
                             </SheetHeader>
 
-                                <ul className='uppercase text-left px-3 '>
+                                <ul className='uppercase  space-y-2 '>
                                   
-                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/"}>Home</Link></li>
-                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/about"}>About</Link></li>
-                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/recipes"}>Recipes</Link></li>
+                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/"} className='block px-4 py-2 rounded-md text-gray-700 shadow-md hover:scale-[1.02] transform hover:text-green-600 transition duration-150 ease-in-out font-medium'>Home</Link></li>
+                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/about"} className='block px-4 py-2 rounded-md text-gray-700 shadow-md hover:scale-[1.02] transform hover:text-green-600 transition duration-150 ease-in-out font-medium'>About</Link></li>
+                    <li className='p-3' onClick={() => setOpen(false)}><Link href={"/recipes"} className='block px-4 py-2 rounded-md text-gray-700 shadow-md hover:scale-[1.02] transform hover:text-green-600 transition duration-150 ease-in-out font-medium'>Recipes</Link></li>
                 </ul>
   
               </SheetContent>
