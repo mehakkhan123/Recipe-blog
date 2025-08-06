@@ -16,7 +16,7 @@ export default function Hero() {
             <p className='text-lg py-4 sm:text-xl md:text-2xl xl:text-5xl md:py-8'>Explore a world of flavours from quick weeknight dinners to gourmet delights.</p>
              <button onClick={()=>{
               router.push("/recipes")
-             }} className='bg-green-600 py-2 px-5 md:py-3 rounded-full text-2xl xl:text-5xl cursor-pointer hover:bg-green-500 transition duration-500 ease-in-out font-semibold'>Browse Recipes</button>
+             }} className='bg-green-600 py-2 px-5 md:py-4 md:px-6 rounded-full text-2xl xl:text-5xl cursor-pointer hover:bg-green-500 transition duration-500 ease-in-out font-semibold'>Browse Recipes</button>
           </div>
     
         </div>
