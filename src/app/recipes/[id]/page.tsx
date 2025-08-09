@@ -5,7 +5,11 @@ interface RecipeDetailParams  {
   id: string;
 };
 
-export default async function RecipeDetail({params}:{params:RecipeDetailParams}) {
+interface RecipeDetailPageProps {
+  params: Promise<RecipeDetailParams>;
+};
+
+export default async function RecipeDetail({params}:RecipeDetailPageProps) {
   const {id} = await params
   
     const getItem = recipe.find((item)=>{
