@@ -1,7 +1,12 @@
 import React from 'react'
 import { recipe } from '@/components/RecipeCardDetail'
 
-export default function RecipeDetail({params}:any) {
+type RecipeDetailParams = {
+  id: string;
+};
+
+export default function RecipeDetail({params}:{params:RecipeDetailParams}) {
+  
     const getItem = recipe.find((item)=>{
        return item.id===parseInt(params.id)
     })
