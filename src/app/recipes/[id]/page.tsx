@@ -1,6 +1,5 @@
 import React from 'react'
 import { recipe } from '@/components/RecipeCardDetail'
-import { Recipe } from '@/components/recipeInterface'
 
 export default function RecipeDetail({params}:any) {
     const getItem = recipe.find((item)=>{
