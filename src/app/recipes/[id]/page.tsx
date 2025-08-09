@@ -1,5 +1,7 @@
 import React from 'react'
 import { recipe } from '@/components/RecipeCardDetail'
+import Image from 'next/image';
+import { Recipe } from '@/components/recipeInterface';
 
 interface RecipeDetailParams  {
   id: string;
@@ -18,9 +20,12 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
     
     
   return (
-    <div>
-        <h1>Recipe details</h1>
-        <h2>{getItem?.title}</h2>
+    <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2'>
+      <div>
+          <Image src={getItem?.image} alt={getItem?.title} width={300} height={300}/>
+          <h1>{getItem?.title}</h1>
+          <p>{getItem?.description}</p>
+      </div>
     </div>
   )
 }
