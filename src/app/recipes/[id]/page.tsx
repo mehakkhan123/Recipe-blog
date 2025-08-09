@@ -1,7 +1,7 @@
 import React from 'react'
 import { recipe } from '@/components/RecipeCardDetail'
 
-type RecipeDetailParams = {
+interface RecipeDetailParams  {
   id: string;
 };
 
