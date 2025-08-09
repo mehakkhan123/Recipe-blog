@@ -13,7 +13,7 @@ export default function RecipeCard() {
             {
                 recipe.map((item)=>{
                     return(
-                    <div key={item.id} className='flex flex-col items-center justify-center max-w-[300px] min-h-[500px] gap-3'>
+                    <div key={item.id} className='flex flex-col items-center justify-center max-w-[300px] min-h-[600px] gap-3'>
                         <Image src={item.image} alt={item.title} width={500} height={500}/>
                         <h2>{item.title}</h2>
                         <p className='flex-grow'>{item.description}</p>
@@ -22,7 +22,7 @@ export default function RecipeCard() {
                             <h3>{item.servings}</h3>
                         </div>
                         <button onClick={()=>{
-              router.push("/recipes")
+              router.push(`/recipes/${item.id}`)
              }} className='bg-green-600 w-full text-white py-2 px-5 rounded-lg cursor-pointer hover:bg-green-500 transition duration-500 ease-in-out font-semibold'>Browse Recipes</button>
 
                     </div>)
