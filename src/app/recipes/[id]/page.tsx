@@ -6,9 +6,10 @@ interface RecipeDetailParams  {
 };
 
 export default function RecipeDetail({params}:{params:RecipeDetailParams}) {
+  const {id} = params
   
     const getItem = recipe.find((item)=>{
-       return item.id===parseInt(params.id)
+       return item.id===parseInt(id)
     })
     
     
