@@ -5,8 +5,8 @@ interface RecipeDetailParams  {
   id: string;
 };
 
-export default function RecipeDetail({params}:{params:RecipeDetailParams}) {
-  const {id} = params
+export default async function RecipeDetail({params}:{params:RecipeDetailParams}) {
+  const {id} = await params
   
     const getItem = recipe.find((item)=>{
        return item.id===parseInt(id)
