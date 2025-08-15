@@ -33,11 +33,14 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
 
     
   return (
-    <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2'>
-      <div>
-          <div className='flex flex-col md:flex-row w-full max-w-4xl gap-8'>
-            <Image src={getItem.image} alt={getItem.title} width={300} height={300} className='object-cover' />
-                <div className='bg-gray-100 p-6 rounded-lg  shadow-md'>  {/* recipe summary container */}
+    
+      <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2 mx-auto'>
+        <h1 className=''>{getItem.title}</h1>
+          <p>{getItem.description}</p>
+
+          <div className='flex flex-col md:flex-row w-full items-center justify-center gap-8'>
+            <Image src={getItem.image} alt={getItem.title} width={300} height={300} />
+                <div className='bg-gray-100 p-6 rounded-lg  shadow-md w-full max-w-[800px]'>  {/* recipe summary container */}
                   <div className='flex justify-between'>   {/* category */}
                     <div className='flex items-center gap-2'><FaFolder /> <h3>Category</h3></div>
                     <h3>{getItem.category}</h3>
@@ -60,9 +63,8 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
                   </div>
                 </div>
           </div>
-          <h1 className=''>{getItem.title}</h1>
-          <p>{getItem.description}</p>
-      </div>
+                    
+      
     </div>
   )
 }
