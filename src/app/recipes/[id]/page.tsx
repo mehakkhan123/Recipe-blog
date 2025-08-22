@@ -34,13 +34,13 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
     
   return (
     
-      <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2 mx-auto'>
-        <h1 className=''>{getItem.title}</h1>
-          <p>{getItem.description}</p>
+      <div className='flex flex-col w-full px-6 max-w-[1536px] justify-center mt-2 mx-auto'>
+        <h1 className='font-bold text-2xl md:text-4xl text-center py-3'>{getItem.title}</h1>
+          <p className='md:text-2xl text-center'>{getItem.description}</p>
 
-          <div className='flex flex-col md:flex-row w-full items-center justify-center gap-8'>
+          <div className='flex flex-col md:flex-row w-full items-center justify-center gap-8 mt-4'>
             <Image src={getItem.image} alt={getItem.title} width={300} height={300} />
-                <div className='bg-gray-100 p-6 rounded-lg  shadow-md w-full max-w-[800px]'>  {/* recipe summary container */}
+                <div className=' p-6 rounded-lg flex flex-col justify-center gap-7 shadow-md w-full max-w-[400px] h-[300px] text-sm sm:text-lg md:text-xl text-green-700'>  {/* recipe summary container */}
                   <div className='flex justify-between'>   {/* category */}
                     <div className='flex items-center gap-2'><FaFolder /> <h3>Category</h3></div>
                     <h3>{getItem.category}</h3>
@@ -62,6 +62,29 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
                     <h3>{getItem.cuisine}</h3>
                   </div>
                 </div>
+          </div>
+
+
+          <div className='mt-7'>   {/* ingredients container */}
+            <h2 className='font-bold text-xl'>Ingredients</h2>
+            {
+              getItem.ingredients.map((item)=>{
+                return(
+                  <li key={item}>{item}</li>
+                )
+              })
+            }
+          </div>
+
+                    <div className='mt-7'>   {/* instructions container */}
+            <h2 className='font-bold text-xl'>Instructions</h2>
+            {
+              getItem.instructions.map((item)=>{
+                return(
+                  <li key={item}>{item}</li>
+                )
+              })
+            }
           </div>
                     
       
