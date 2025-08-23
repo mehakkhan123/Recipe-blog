@@ -40,7 +40,7 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
 
           <div className='flex flex-col md:flex-row w-full items-center justify-center gap-8 mt-4'>
             <Image src={getItem.image} alt={getItem.title} width={300} height={300} />
-                <div className=' p-6 rounded-lg flex flex-col justify-center gap-7 shadow-md w-full max-w-[400px] h-[300px] text-sm sm:text-lg md:text-xl text-green-700'>  {/* recipe summary container */}
+                <div className=' p-6 rounded-lg flex flex-col justify-between md:justify-center md:gap-7 shadow-md w-full max-w-[400px] h-[300px] text-sm sm:text-lg md:text-xl text-green-700'>  {/* recipe summary container */}
                   <div className='flex justify-between'>   {/* category */}
                     <div className='flex items-center gap-2'><FaFolder /> <h3>Category</h3></div>
                     <h3>{getItem.category}</h3>
@@ -65,23 +65,23 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
           </div>
 
 
-          <div className='mt-7'>   {/* ingredients container */}
+          <div className='mt-7 px-6'>   {/* ingredients container */}
             <h2 className='font-bold text-xl'>Ingredients</h2>
             {
               getItem.ingredients.map((item)=>{
                 return(
-                  <li key={item}>{item}</li>
+                  <li key={item} className='text-amber-600 list-image-none text-md md:text-2xl font-semibold'>{item}</li>
                 )
               })
             }
           </div>
 
-                    <div className='mt-7'>   {/* instructions container */}
+                    <div className='mt-7 px-6'>   {/* instructions container */}
             <h2 className='font-bold text-xl'>Instructions</h2>
             {
               getItem.instructions.map((item)=>{
                 return(
-                  <li key={item}>{item}</li>
+                  <li key={item} className='list-decimal mb-3'>{item}</li>
                 )
               })
             }
