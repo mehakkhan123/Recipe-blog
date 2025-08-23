@@ -24,18 +24,13 @@ interface RecipeDetailPageProps {
 export default async function RecipeDetail({params}:RecipeDetailPageProps) {
 
   const {id} = await params
-
- 
-
-    const getItem = recipe.find((item)=>{
-
+   const getItem = recipe.find((item)=>{
        return item.id===parseInt(id)
-
     })  
   if (!getItem) {
     return (
       <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2'>
-        <p className="text-xl font-bold">Sorry, we couldn't find that recipe.</p>
+        <p className="text-xl font-bold">Sorry, we couldn&apos;t find that recipe.</p>
         <p className="text-gray-600 mt-2">Please check the URL or try searching for another recipe.</p>
       </div>
     );
