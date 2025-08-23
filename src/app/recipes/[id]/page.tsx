@@ -7,21 +7,31 @@ import { PiChefHatFill } from 'react-icons/pi';
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaGlobeAmericas } from "react-icons/fa";
 
-interface RecipeDetailParams {
-  id: string;
-}
+interface RecipeDetailParams  {
+
+  id: string;
+
+};
+
+
 
 interface RecipeDetailPageProps {
-  params: RecipeDetailParams;
-}
 
-export default function RecipeDetail({ params }: RecipeDetailPageProps) {
-  const { id } = params;
-  
-  const getItem = recipe.find((item) => {
-    return item.id === parseInt(id);
-  });
-  
+  params: Promise<RecipeDetailParams>;
+
+};
+
+export default async function RecipeDetail({params}:RecipeDetailPageProps) {
+
+  const {id} = await params
+
+ 
+
+    const getItem = recipe.find((item)=>{
+
+       return item.id===parseInt(id)
+
+    })  
   if (!getItem) {
     return (
       <div className='flex flex-col w-full items-center px-6 max-w-[1536px] justify-center mt-2'>
