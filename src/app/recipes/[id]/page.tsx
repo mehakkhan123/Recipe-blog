@@ -6,6 +6,7 @@ import { FaRegHourglassHalf } from "react-icons/fa6";
 import { PiChefHatFill } from 'react-icons/pi';
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaGlobeAmericas } from "react-icons/fa";
+import BackBtn from '@/components/BackBtn';
 
 interface RecipeDetailParams  {
 
@@ -38,6 +39,7 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
   
   return (
     <div className='flex flex-col w-full px-6 max-w-[1536px] justify-center mt-2 mx-auto'>
+      <BackBtn/>
       <h1 className='font-bold text-2xl md:text-4xl text-center py-3'>{getItem.title}</h1>
       <p className='md:text-2xl text-center'>{getItem.description}</p>
       
