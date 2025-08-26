@@ -7,6 +7,7 @@ import { PiChefHatFill } from 'react-icons/pi';
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaGlobeAmericas } from "react-icons/fa";
 import BackBtn from '@/components/BackBtn';
+import Comments from '@/components/Comments';
 
 interface RecipeDetailParams  {
 
@@ -86,6 +87,7 @@ export default async function RecipeDetail({params}:RecipeDetailPageProps) {
           ))}
         </ol>
       </div>
+      <Comments/>
     </div>
   );
 }
