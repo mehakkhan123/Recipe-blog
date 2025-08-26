@@ -10,7 +10,9 @@ export default function Comments() {
 
             <label htmlFor="" className='font-semibold mt-3'>Your Comment</label>
             <textarea className='border border-black rounded-md p-2'/>
-            <button type="submit" className='bg-green-600 text-white p-2 rounded-md shadow-md mt-3 cursor-pointer hover:bg-green-500 transition-all ease-in-out duration-100'>Submit Comment</button>
+            <div>
+                <button type="submit" className='bg-green-600 text-white py-2 px-4 rounded-md shadow-md mt-3 cursor-pointer hover:bg-green-500 transition-all ease-in-out duration-500 font-semibold'>Submit Comment</button>
+            </div>
 
         </form>
     </div>

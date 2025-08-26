@@ -27,7 +27,7 @@ export default function RecipeCard() {
                         </div>
                         <button onClick={()=>{
               router.push(`/recipes/${item.id}`)
-             }} className='bg-green-600 w-full text-white py-2 px-5 rounded-lg cursor-pointer hover:bg-green-500 transition duration-500 ease-in-out font-semibold'>View Recipe</button>
+             }} className='bg-green-600 w-full text-white py-2 px-5 rounded-lg cursor-pointer hover:bg-green-500 transition duration-500 ease-in-out font-semibold shadow-md'>View Recipe</button>
                         </div>
 
                     </div>)
